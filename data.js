@@ -67,50 +67,27 @@ function deleteData(data, id){
 
 }
 
-function editData(data, id){
+
+function editData(data, id, name, phone, email, requirement){
 
     let length = data.length;
-    console.log(id);
-    console.log(data);
+    // console.log(id);
 
-    // for(d=0; d<length; d++){
-    //     // console.log(d);
+    for(d=0; d<length; d++){
+        // console.log(d);
         
-    //     if(data[d].employer_id === id){  //i use = can work, == cannot work...
-    //         // console.log(id)
-    //         console.log(data[d].employer_name);
-    //         data[d].employer_name = name;
-    //         data[d].phone = phone;
-    //         data[d].email = email;
-    //         data[d].requirement = requirement;
+        if(data[d].employer_id === id){  //i use = can work, == cannot work...
+            // console.log(id)
+            console.log(data[d].employer_name);
+            data[d].employer_name = name;
+            data[d].phone = phone;
+            data[d].email = email;
+            data[d].requirement = requirement;
             
-    //     }                    
+        }                    
       
-    // }
+    }
 
 }
-
-// function editData(data, id, name, phone, email, requirement){
-
-//     let length = data.length;
-//     // console.log(id);
-//     myModal.show();
-
-//     for(d=0; d<length; d++){
-//         // console.log(d);
-        
-//         if(data[d].employer_id === id){  //i use = can work, == cannot work...
-//             // console.log(id)
-//             console.log(data[d].employer_name);
-//             data[d].employer_name = name;
-//             data[d].phone = phone;
-//             data[d].email = email;
-//             data[d].requirement = requirement;
-            
-//         }                    
-      
-//     }
-
-// }
 
 

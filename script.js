@@ -1,5 +1,6 @@
-const myModal = new bootstrap.Modal(document.querySelector('#myModal_new_data'));
-const password = 123456;
+var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+
+
 document.addEventListener("DOMContentLoaded", async function(){
 
     database = await getData();
@@ -8,46 +9,31 @@ document.addEventListener("DOMContentLoaded", async function(){
     
 })
 
-document.getElementById("#agentLogin").addEventListener("click", function(event) {
-    event.preventDefault(); // prevent default link behavior
-    // your code here
-    console.log("Link clicked!");
-  });
-
-
-document.querySelector("#add_button").addEventListener("click", function(){
-
-    
-    myModal.show();
-    // console.log("hello this is desmond");
     document.querySelector("#save_new_data").addEventListener("click",function(){
-        let employer_name = document.querySelector("#new_employer_name").value;
-        let phone = document.querySelector("#new_phone").value;
-        let email = document.querySelector("#new_email").value;
-        let requirement = document.querySelector("#new_employer_requirement").value;
-        
-        employer_name = "";
-        name = "";
-        phone = "";
-        email = "";
-        requirement = "";
 
+        let employer_name = document.querySelector("#new_employer_name");
+        let phone = document.querySelector("#new_phone");
+        let email = document.querySelector("#new_email");
+        let requirement = document.querySelector("#new_employer_requirement");
+
+        employer_name = employer_name.value;
+        phone = phone.value;
+        email = email.value;
+        requirement = requirement.value;
+        
         console.log(employer_name+phone+email+requirement);
         addData(employer_name,phone,email,requirement);
-        employer_name = "";
-        name = "";
-        phone = "";
-        email = "";
-        requirement = "";
+ 
         render_list();
         myModal.hide();
+        
 
     })
 
     
 
 
-})
+
 
 document.querySelector("#upload_button").addEventListener("click", function(){
 
@@ -92,11 +78,16 @@ function render_list(){
     let allEditButtons =document.querySelectorAll(".edit");
     for(let button of allEditButtons){
         button.addEventListener("click", function(event){
-
+        
         let clickedButton = event.target;
         let id = Number(clickedButton.dataset.employerid);
-                
-        editData(userdata,id);    
+
+        let name = prompt("Enter new name: ");
+        let phone = prompt("Enter new phone number: ");
+        let email = prompt("Enter new email: ");
+        let requirement = prompt("Enter your new requirement ");
+        editData(userdata,id,name,phone,email,requirement);
+    
         render_list();
 
     })
@@ -118,7 +109,5 @@ function render_list(){
         
     } 
 }
-
-
 
 
