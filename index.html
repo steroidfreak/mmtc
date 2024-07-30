@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MMTC</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous"> <!--this is the bootstrap css-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <!--this is the google fonts-->
+    <link href="css/main.css" rel="stylesheet">
+    <script>
+      window.addEventListener("message",function(t){var e=document.getElementById("openassistantgpt-chatbot-iframe"),s=document.getElementById("openassistantgpt-chatbot-button-iframe");"openChat"===t.data&&(console.log("Toggle chat visibility"),e&&s?(e.contentWindow.postMessage("openChat","*"),s.contentWindow.postMessage("openChat","*"),e.style.pointerEvents="auto",e.style.display="block",window.innerWidth<640?(e.style.position="fixed",e.style.width="100%",e.style.height="100%",e.style.top="0",e.style.left="0",e.style.zIndex="9999"):(e.style.position="fixed",e.style.width="30rem",e.style.height="65vh",e.style.bottom="0",e.style.right="0",e.style.top="",e.style.left="")):console.error("iframe not found")),"closeChat"===t.data&&e&&s&&(e.style.display="none",e.style.pointerEvents="none",e.contentWindow.postMessage("closeChat","*"),s.contentWindow.postMessage("closeChat","*"))});
+    </script>
+
+
+
+</head>
+    
+<body>
+    <header>
+        <!-- this is the navigation header-->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+          <div class="container-fluid roboto-bold">
+            <a class="navbar-brand" href="index.html"><img src="img/mmtc_logo_290822-removebg-preview1.png" class="img-fluid" alt="logo" width="80"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="ai-assistant.html">AI-Assistant</a>
+                </li>
+                <li class="nav-item" id="agentLogin">
+                  <a class="nav-link" href="mmtc-data-base.html">Agent Login</a>
+                </li>
+                <!-- <li class="nav-item">
+                  <a class="nav-link" href="#">Contact Us</a>
+                </li> -->
+
+
+              </ul>
+            </div>
+          </div>
+        </nav>
+    </header>
+
+    <main> <!--introduction-->
+
+        <div class="container-fluid " >
+            <div class="row text-center " >
+                    <h1 class="montserrat-900 ">Direct hire      <span class="d-inline-flex ms-1 bd-highlight absolute shadow"><a class="btn btn-primary btn btn-danger absolute" href="ai-assistant.html" role="button">Hire Now!
+                      </a>
+                    </span></h1>
+                    
+                    <h1 class="montserrat-900">No agency fee</h1>
+            </div>
+            <div class="container-fluid" >
+              <div class="row"> 
+                <!--carousel display the photos-->   
+                <div class="col-12 col-md-6">
+                  <div id="carouselExampleRide" class="carousel slide" data-bs-ride="true">
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <img src="img/clean-shelf.jpg" class="d-block w-100" alt="clean shelf">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/clean_basin_resized.jpg" class="d-block w-100" alt="clean basin">
+                      </div>
+                      <div class="carousel-item">
+                        <img src="img/sweep_floor_resized.jpg" class="d-block w-100" alt="sweep floor">
+                      </div>
+                    </div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
+                      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
+                      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                      <span class="visually-hidden">Next</span>
+                    </button>
+                  </div>
+                </div>        
+                <!--advantages of MMTC-->
+                <div class="col-12 col-md-6 text-start bgcolor-green my-2 text-white shadow " >
+                  
+                  <div class="pt-1 ">
+                    <h6>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-1-circle" viewBox="0 0 16 16">
+                        <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M9.283 4.002V12H7.971V5.338h-.065L6.072 6.656V5.385l1.899-1.383z"/>
+                      </svg>
+                      No agency fee and we will guide you how to apply if you are not sure.
+                    </h6>
+                    <h6>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-2-circle" viewBox="0 0 16 16">
+                        <path d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.646 6.24v.07H5.375v-.064c0-1.213.879-2.402 2.637-2.402 1.582 0 2.613.949 2.613 2.215 0 1.002-.6 1.667-1.287 2.43l-.096.107-1.974 2.22v.077h3.498V12H5.422v-.832l2.97-3.293c.434-.475.903-1.008.903-1.705 0-.744-.557-1.236-1.313-1.236-.843 0-1.336.615-1.336 1.306"/>
+                      </svg>
+                      Low upfront loan/placement fee.
+                    </h6>
+                    <h6>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-3-circle" viewBox="0 0 16 16">
+                        <path d="M7.918 8.414h-.879V7.342h.838c.78 0 1.348-.522 1.342-1.237 0-.709-.563-1.195-1.348-1.195-.79 0-1.312.498-1.348 1.055H5.275c.036-1.137.95-2.115 2.625-2.121 1.594-.012 2.608.885 2.637 2.062.023 1.137-.885 1.776-1.482 1.875v.07c.703.07 1.71.64 1.734 1.917.024 1.459-1.277 2.396-2.93 2.396-1.705 0-2.707-.967-2.754-2.144H6.33c.059.597.68 1.06 1.541 1.066.973.006 1.6-.563 1.588-1.354-.006-.779-.621-1.318-1.541-1.318"/>
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8"/>
+                      </svg>
+                      We are registered agency in Singapore thus no MIA action from us.
+                    </h6>
+                    <h6>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-4-circle" viewBox="0 0 16 16">
+                        <path d="M7.519 5.057q.33-.527.657-1.055h1.933v5.332h1.008v1.107H10.11V12H8.85v-1.559H4.978V9.322c.77-1.427 1.656-2.847 2.542-4.265ZM6.225 9.281v.053H8.85V5.063h-.065c-.867 1.33-1.787 2.806-2.56 4.218"/>
+                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8"/>
+                      </svg>
+                      Money is paid to our company bank account thus any issue, we cannot run away.
+                    </h6>
+                    <h6>
+                      <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-5-circle" viewBox="0 0 16 16">
+                        <path d="M1 8a7 7 0 1 1 14 0A7 7 0 0 1 1 8m15 0A8 8 0 1 0 0 8a8 8 0 0 0 16 0m-8.006 4.158c-1.57 0-2.654-.902-2.719-2.115h1.237c.14.72.832 1.031 1.529 1.031.791 0 1.57-.597 1.57-1.681 0-.967-.732-1.57-1.582-1.57-.767 0-1.242.45-1.435.808H5.445L5.791 4h4.705v1.103H6.875l-.193 2.343h.064c.17-.258.715-.68 1.611-.68 1.383 0 2.561.944 2.561 2.585 0 1.687-1.184 2.806-2.924 2.806Z"/>
+                      </svg>
+                      We trained our helper for 1 to 2 months in our training centre before we deploy to our customer in Singapore.
+                    </h6>
+                    <div class="d-md-flex flex flex-row bd-highlight mb-1 d-none d-sm-none pt-1 ">
+                      <div class=" p-2 bd-highlight">
+                        <img src="img/clean-living-room.jpg" class="rounded-circle img-fluid"  alt="clean living room" width="130">
+                      </div>
+                      <div class="p-2 bd-highlight">
+                        <img src="img/clean-window.jpg" class="rounded-circle img-fluid"  alt="clean window" width="130">
+                      </div>
+                      <div class="p-2 bd-highlight">
+                        <img src="img/cleaning-toilet-bowl.jpg" class="rounded-circle img-fluid"  alt="clean toilet bowl" width="130">
+                      </div>
+                      <div class="p-2 bd-highlight">
+                        <img src="img/using-vaccum-cleaner.jpg" class="rounded-circle img-fluid"  alt="use vaccum cleaner" width="130">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+    </main>
+
+    <section> <!--about us-->
+      <div class="row p-2 my-2">
+        <h2 class="montserrat-900  text-center">About Us</h2>
+        <h4 class="text-start  roboto-bold ms-2">
+          MMTC is a leading maid agency based in Singapore, specializing in providing trained helpers from our own training centre in Yangon, Myanmar. We have been serving satisfied customers since 2021.       
+        </h4>
+        <div class="col-12 col-sm-12 col-md-6 mb-2">
+          <img src="img/PhotoReal_professional_lady_asian_consultant_with_a_beautiful_3.jpg" class="img-fluid rounded-pill img-thumbnail" alt="lady">
+        </div>
+        <div class="col-12 col-sm-12 col-md-6">
+          <img src="img/PhotoReal_professional_business_hand_shake_1.jpg" class="img-fluid rounded-pill img-thumbnail" alt="hand shake">
+        </div>
+        <div class="row text-start roboto-bold b">
+          <div class="col-12 col-sm-12 col-md-4 flex-fill  mt-1 mb-1 ms-3 bgcolor-green text-white shadow-lg">
+            <h5>We offer a wide range of domestic helper placement services, including full-time helpers, transportation services, passport renewal services etc.</h5>
+          </div>
+          <div class="col col-sm-12 col-md-4 flex-fill  ms-3 bgcolor-green text-white shadow-lg">
+            <h5>We provide ongoing support to both our customers and helpers, ensuring a smooth and successful placement experience.</h5>
+          </div>
+          <div class="col col-sm-12 col-md-4 flex-fill  ms-3 mt-1 bgcolor-green text-white shadow-lg">
+            <h5>Our training centre in Yangon provides comprehensive training programs for domestic helpers, ensuring that they are equipped with the necessary skills and knowledge.</h5>
+          </div>
+        </div>
+      </div>
+
+    </section>
+
+    <section> <!--our own training centre-->
+      <div class="container-fluid">      
+        <div class="row p-3 my-3">
+          <h2 class="montserrat-900 text-center">Our Own Training Centre</h2>
+
+          <div class="col-12 col-sm-12 col-md-6">
+            <img src="img/mmtc-learning-english.jpg" class="img-fluid rounded" alt="maid learn english">
+          </div>
+
+          <div class="col-12 col-sm-12 col-md-6">
+            
+            <div class="row text-start  rounded my-1 robot-bold">
+              <div class="col-12 bgcolor-green text-white mb-1 shadow-lg">
+                <h5>
+                Since 2022, our Training Centre in Yangon, Myanmar, has been committed to providing highly skilled and reliable helpers.
+                </h5>
+              </div>
+              <div class="col-12 bgcolor-green text-white mb-1 shadow-lg">
+                <h5>
+                Our Fresh Myanmar Helpers are rigorously selected and undergo a mandatory two-month training program covering infant care, elderly care, household chores, and cooking.
+                </h5>
+              </div>
+              <div class="col-12 bgcolor-green text-white mb-1 shadow-lg">  
+                <h5>
+                Language courses in English is also included to ensure effective communication in diverse households. Our Training Centre demonstrates our dedication to excellence, enhancing our helpers' capabilities to exceed household expectations.
+                </h5>
+              </div>
+              <div class="d-md-flex flex flex-row bd-highlight mb-3 d-none d-sm-none">
+                <div class="p-2 bd-highlight">
+                  <img src="img/baby.png" class="rounded-circle img-fluid"  alt="baby" width="110">
+                </div>
+                <div class="p-2 bd-highlight">
+                  <img src="img/elderly.png" class="rounded-circle img-fluid"  alt="elderly" width="130">
+                </div>
+                <div class="p-2 bd-highlight">
+                  <img src="img/dog.png" class="rounded-circle img-fluid"  alt="dog" width="130">
+                </div>
+                <div class="p-2 bd-highlight">
+                  <img src="img/cooking.png" class="rounded-circle img-fluid"  alt="cooking" width="150">
+                </div>
+              </div>
+                
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <footer>
+      <div class="container-fluid">
+        <div class="row text-white roboto-bold bg-dark text-center">
+          <div class="col-12 col-sm-12 col-md-4 text-center ">
+            <img src="img/house_keeping-removebg-preview.png" class="img-fluid" alt="logo1" width="300">
+          </div>
+          <div class="col-12 col-sm-12 col-md-4 text-center p-5 ">
+            <img src="img/mmtc_logo_290822-removebg-preview1.png" class="img-fluid pb-3 ps-3" alt="logo" width="150">
+          
+            <h5><strong><u>Contact Us:</u></strong></h5>
+            <h5>myanmarmaidsg@gmail.com</h5>
+            <h5>+65 82000631</h5>
+            <h5><strong>Address:</strong></h5>
+            <h5>Clementi Avenue 4 S122311</h5>
+          
+          </div>
+          <div class="d-none d-sm-none d-md-block col-md-3 text-center mt-5">
+            <h1 class="text-danger"><strong>Follow Us</strong></h1>
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+                      <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+                    </svg>
+                  </div>
+                  <div class="col">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+                      <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+                    </svg>
+                  </div>
+                  <div class="col">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-tiktok" viewBox="0 0 16 16">
+                      <path d="M9 0h1.98c.144.715.54 1.617 1.235 2.512C12.895 3.389 13.797 4 15 4v2c-1.753 0-3.07-.814-4-1.829V11a5 5 0 1 1-5-5v2a3 3 0 1 0 3 3z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+          </div>
+        </div>
+
+      </div>
+      <p class="bg-dark text-white text-center">&copy; 2024 Myanmar Maid Training Centre. All rights reserved.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <iframe src="https://www.openassistantgpt.io/embed/clwkg9ruh000311ctgf80h7m0/button?chatbox=false"
+    style="z-index: 50; margin-right: 1rem; margin-bottom: 1rem; position: fixed; right: 0; bottom: 0; width: 60px; height: 60px; border: 0; border: 2px solid #e2e8f0; border-radius: 50%; color-scheme: none; background: none;box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);"
+    id="openassistantgpt-chatbot-button-iframe"></iframe>
+    <!-- This chatbot is build using https://openassistantgpt.io/ -->
+    <iframe src="https://www.openassistantgpt.io/embed/clwkg9ruh000311ctgf80h7m0/window?chatbox=false&withExitX=true"
+    style="z-index: 50; margin-right: 1rem; margin-bottom: 6rem; display: none; position: fixed; right: 0; bottom: 0; pointer-events: none; overflow: hidden; height: 65vh; border: 2px solid #e2e8f0; border-radius: 0.375rem; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06); width: 30rem;"
+    allowfullscreen id="openassistantgpt-chatbot-iframe"></iframe>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+
+</html>
