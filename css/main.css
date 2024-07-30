@@ -1,0 +1,107 @@
+body{
+
+    background: #FFFFFF;
+background: -moz-linear-gradient(left, #FFFFFF 0%, #ADEFFF 50%, #FFFFFF 100%);
+background: -webkit-linear-gradient(left, #FFFFFF 0%, #ADEFFF 50%, #FFFFFF 100%);
+background: linear-gradient(to right, #FFFFFF 0%, #ADEFFF 50%, #FFFFFF 100%);
+    
+    padding-top: 70px;
+    margin: 0;
+    height: auto;
+   
+}
+
+
+
+.bgcolor-green {
+    background: linear-gradient(135deg, #65befe 25%, #c7d4f9 100%);
+    background-size: cover;
+
+    color: #333;
+
+    padding: 
+    margin: 0;
+    height: auto;
+
+}
+
+.texture {
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 0;
+}
+.content {
+    position: relative;
+    z-index: 1;
+}
+
+.move-button{
+    width: 100px;
+    height: 50px; 
+    background-color: yellow;
+    border: 1px solid black;
+    transform: translate(110px,-30px);
+    /* position: fixed; */
+    
+}
+
+.absolute {
+    position: absolute;
+    /* right: 0; */
+    width: 105px;
+    height: 40px;
+    /* transform: translate(-65px,145px);  */
+    z-index: 1;
+    
+}
+
+.roboto-light {
+font-family: "Roboto", sans-serif;
+font-weight: 300;
+font-style: normal;
+}
+
+.roboto-regular {
+font-family: "Roboto", sans-serif;
+font-weight: 400;
+font-style: normal;
+}
+
+.roboto-medium {
+font-family: "Roboto", sans-serif;
+font-weight: 500;
+font-style: normal;
+}
+
+.roboto-bold {
+font-family: "Roboto", sans-serif;
+font-weight: 700;
+font-style: normal;
+}
+
+.roboto-black {
+font-family: "Roboto", sans-serif;
+font-weight: 900;
+font-style: normal;
+}
+
+
+
+.montserrat-900 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
+}
+
+
+
+
+
+ 
