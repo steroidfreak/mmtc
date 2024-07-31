@@ -49,17 +49,20 @@ function addData(name,phone,email,requirement){
 
 function deleteData(data, id){
 
-    // console.log(data);
+     console.log(id);
 
     let indexToDelete = null;
     let index = -1; // start from -1 because the first element to 0
     
     for (let b of data) {
-      index = index + 1;
-      if (b.id == id) {
+      
+        index ++;
+      if (b.id === id) {
         indexToDelete = index;
+        console.log(indexToDelete);
         break;
       }
+      
     }
   
     data.splice(indexToDelete, 1);
