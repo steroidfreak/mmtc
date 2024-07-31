@@ -56,12 +56,14 @@ function deleteData(data, id){
     
     for (let b of data) {
       
-        index ++;
-      if (b.id === id) {
-        indexToDelete = index;
+      if (b.employer_id === id) {
+        indexToDelete = index+1;
         console.log(indexToDelete);
-        break;
+        // break;
       }
+      console.log(index);
+      index++;
+      console.log(index);
       
     }
   

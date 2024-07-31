@@ -63,7 +63,7 @@ function render_list(){
     
         employerData.innerHTML = `
         
-        ${userdata[i].employer_name} ${userdata[i].phone} (${userdata[i].email})
+        <div class=${userdata[i].employer_name} ${userdata[i].phone} (${userdata[i].email})
         <br>${userdata[i].requirement} 
         
         <button type="button" class="edit btn btn-info" data-employerid="${userdata[i].employer_id}">Edit</button>
@@ -84,6 +84,7 @@ function render_list(){
         
         let clickedButton = event.target;
         let id = Number(clickedButton.dataset.employerid);
+        console.log(id);
 
         let name = prompt("Enter new name: ");
         let phone = prompt("Enter new phone number: ");
@@ -104,6 +105,7 @@ function render_list(){
         button.addEventListener("click", function(event){
         // get the id
         let id = Number(event.target.dataset.employerid);
+        console.log(id);
         deleteData(userdata, id);
         render_list();
     })
