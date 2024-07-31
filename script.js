@@ -55,12 +55,15 @@ function render_list(){
     employer_list.innerHTML = "";
 
     let parent = document.querySelector("#output");
+
     for(let i=0; i<length; i++){
         // console.log(data.users[i].firstName);
         let employerData = document.createElement('li');
         employerData.className = 'list-group-item';
     
-        employerData.innerHTML = `${userdata[i].employer_name} ${userdata[i].phone} (${userdata[i].email})
+        employerData.innerHTML = `
+        
+        ${userdata[i].employer_name} ${userdata[i].phone} (${userdata[i].email})
         <br>${userdata[i].requirement} 
         
         <button type="button" class="edit btn btn-info" data-employerid="${userdata[i].employer_id}">Edit</button>
