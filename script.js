@@ -52,27 +52,35 @@ function render_list(){
     let userdata = database.employer_data;
     let length = userdata.length;
     let employer_list = document.querySelector("#output")
+    let employerData = "";
     employer_list.innerHTML = "";
+    
 
     let parent = document.querySelector("#output");
-    for(let i=0; i<length; i++){
-        // console.log(data.users[i].firstName);
-        let employerData = document.createElement('li');
-        employerData.className = 'list-group-item';
     
-        employerData.innerHTML = `${userdata[i].employer_name} ${userdata[i].phone} (${userdata[i].email})
-        <br>${userdata[i].requirement} 
-        
-        <button type="button" class="edit btn btn-info" data-employerid="${userdata[i].employer_id}">Edit</button>
-        <button type="button" class="delete btn btn-danger" data-employerid="${userdata[i].employer_id}">Delete</button>
+    for(let i=0; i<length; i++){
+        employerData = document.createElement('tr');
+        employerData.className = 'table-group-item';
+    
+        employerData.innerHTML = `
+        <tr>
+            <td>${userdata[i].employer_name} </td>
+            <td>${userdata[i].phone} </td>
+            <td>(${userdata[i].email})</td>
+            <td>${userdata[i].requirement} </td>
+            <td><button type="button" class="edit btn btn-info" data-employerid="${userdata[i].employer_id}">Edit</button></td>
+            <td><button type="button" class="delete btn btn-danger" data-employerid="${userdata[i].employer_id}">Delete</button></td>
+          </tr>
         `;
-        
-        
         parent.appendChild(employerData);    
+
+        
 
  
     }
+    console.log(employer_list.innerHTML);
 
+ 
 
     //EDIT BUTTONS
     let allEditButtons =document.querySelectorAll(".edit");
