@@ -1,12 +1,12 @@
-//jsonbin id "66a13d7cacd3cb34a86ac775"
+//jsonbin id "66a13d7cacd3cb34a86ac775" this is the id for storing the data
+//creating constant for jsobin api login information as below
 const jsonbin_root = "https://api.jsonbin.io/v3";
 const jsonbin_base_id = "66a13d7cacd3cb34a86ac775";
 const url = jsonbin_root + jsonbin_base_id;
 let database =[];
-// let new_employer={};
 
-
-
+//using axios.get to get response from jsonbin and pass to renderList for display of data
+//on screen for viewing
 async function getData(){
 
     let response = await axios.get(`${jsonbin_root}/b/${jsonbin_base_id}/latest`)
@@ -15,21 +15,19 @@ async function getData(){
 
 }
 
+//function to put(store) data into jsbon using axios.put command
 async function saveData(userdata){
 
-    // console.log(userdata);
-
     let response = await axios.put(`${jsonbin_root}/b/${jsonbin_base_id}` , userdata);
+    console.log(response.data);
 
-    //  console.log(response.data);
 }
 
+//function to add a new employer database into the employer data object.
 function addData(name,phone,email,requirement){
 
-    
-     console.log(name,phone,email,requirement);
     let id = Math.floor(Math.random() * 10000) + 1;
-    // console.log(id);
+
     new_employer = {
         
         "employer_id"   :   id,
@@ -40,16 +38,12 @@ function addData(name,phone,email,requirement){
         
     }
     
-    console.log(new_employer);
     database.employer_data.push(new_employer);
-    // console.log(database);
-    
 
 }
 
+//function to delete selected employer data through employer_id
 function deleteData(data, id){
-
-    // console.log(data);
 
     let indexToDelete = null;
     let index = -1; // start from -1 because the first element to 0
@@ -63,22 +57,18 @@ function deleteData(data, id){
     }
   
     data.splice(indexToDelete, 1);
-    // console.log(data);
 
 }
 
-
+//function to edit the selected employer data through employer_id and add to database
 function editData(data, id, name, phone, email, requirement){
 
     let length = data.length;
-    // console.log(id);
 
     for(d=0; d<length; d++){
-        // console.log(d);
         
-        if(data[d].employer_id === id){  //i use = can work, == cannot work...
-            // console.log(id)
-            console.log(data[d].employer_name);
+        if(data[d].employer_id === id){  
+
             data[d].employer_name = name;
             data[d].phone = phone;
             data[d].email = email;

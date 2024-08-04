@@ -1,4 +1,4 @@
-var myModal = new bootstrap.Modal(document.getElementById('exampleModal'));
+const myModal = new bootstrap.Modal(document.getElementById('editDataModal'));
 
 
 document.addEventListener("DOMContentLoaded", async function(){
@@ -9,32 +9,28 @@ document.addEventListener("DOMContentLoaded", async function(){
     
 })
 
-    document.querySelector("#save_new_data").addEventListener("click",function(){
+//listen to event and save data from modal input and pass data to addData() to add into database
+document.querySelector("#save_new_data").addEventListener("click",function(){
 
-        let employer_name = document.querySelector("#new_employer_name");
-        let phone = document.querySelector("#new_phone");
-        let email = document.querySelector("#new_email");
-        let requirement = document.querySelector("#new_employer_requirement");
+    let employer_name = document.querySelector("#new_employer_name");
+    let phone = document.querySelector("#new_phone");
+    let email = document.querySelector("#new_email");
+    let requirement = document.querySelector("#new_employer_requirement");
 
-        employer_name = employer_name.value;
-        phone = phone.value;
-        email = email.value;
-        requirement = requirement.value;
-        
-        console.log(employer_name+phone+email+requirement);
-        addData(employer_name,phone,email,requirement);
- 
-        render_list();
-        myModal.hide();
-        
-
-    })
-
+    employer_name = employer_name.value;
+    phone = phone.value;
+    email = email.value;
+    requirement = requirement.value;
     
+    console.log(employer_name+phone+email+requirement);
+    addData(employer_name,phone,email,requirement);
 
+    render_list();
+    myModal.hide();
+    
+})
 
-
-
+//listen to event and when click, pass the database to saveData() to store data in JSONBIN
 document.querySelector("#upload_button").addEventListener("click", function(){
 
     saveData(database);
@@ -46,7 +42,7 @@ document.querySelector("#upload_button").addEventListener("click", function(){
 
 })
 
-
+//renderlist() to display output according to our customised rendered behaviour when function is called.
 function render_list(){
 
     let userdata = database.employer_data;
@@ -70,17 +66,11 @@ function render_list(){
             <td>${userdata[i].requirement} </td>
             <td><button type="button" class="edit btn btn-info" data-employerid="${userdata[i].employer_id}">Edit</button></td>
             <td><button type="button" class="delete btn btn-danger" data-employerid="${userdata[i].employer_id}">Delete</button></td>
-          </tr>
-        `;
+        </tr> `;
+
         parent.appendChild(employerData);    
 
-        
-
- 
     }
-    console.log(employer_list.innerHTML);
-
- 
 
     //EDIT BUTTONS
     let allEditButtons =document.querySelectorAll(".edit");
@@ -95,7 +85,6 @@ function render_list(){
         let email = prompt("Enter new email: ");
         let requirement = prompt("Enter your new requirement ");
         editData(userdata,id,name,phone,email,requirement);
-    
         render_list();
 
     })
